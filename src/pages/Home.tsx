@@ -3,7 +3,6 @@ import { ArrowRight, CheckCircle2, Star, Users, Award, Clock } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import heroImage from "../hero.png";
 
 export default function Home() {
   return (
@@ -11,8 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden bg-slate-900 -mt-[116px]">
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          className="absolute inset-0 z-0 opacity-50 hero-custom-bg"
           role="img"
           aria-label="Medical illustration background"
         />

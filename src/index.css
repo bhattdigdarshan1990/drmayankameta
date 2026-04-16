@@ -192,3 +192,10 @@
     @apply font-sans;
     }
 }
+
+.hero-custom-bg {
+  background-image: url('/hero-v3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
