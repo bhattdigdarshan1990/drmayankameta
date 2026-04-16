@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Star, Users, Award, Clock } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import heroImage from "@/src/assets/hero.png";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center overflow-hidden bg-slate-900 -mt-[116px]">
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero.png"
+            src={heroImage}
             alt="Gastroenterology Specialist"
             className="w-full h-full object-cover opacity-50"
             referrerPolicy="no-referrer"
