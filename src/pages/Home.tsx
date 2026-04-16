@@ -3,23 +3,21 @@ import { ArrowRight, CheckCircle2, Star, Users, Award, Clock } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import heroImage from "@/src/assets/hero.png";
+import heroImage from "../hero.png";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden bg-slate-900 -mt-[116px]">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="Gastroenterology Specialist"
-            className="w-full h-full object-cover opacity-50"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-slate-900/60 to-slate-900" />
-          <div className="absolute inset-0 bg-blue-500/5 mix-blend-overlay" />
-        </div>
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: `url(${heroImage})` }}
+          role="img"
+          aria-label="Medical illustration background"
+        />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-slate-900/30 via-slate-900/60 to-slate-900" />
+        <div className="absolute inset-0 z-[2] bg-blue-500/5 mix-blend-overlay" />
 
         <div className="container max-w-7xl mx-auto px-4 relative z-10 pt-[116px]">
           <motion.div
