@@ -10,16 +10,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden bg-slate-900 -mt-[116px]">
         {/* Background Image Layer */}
-        <div 
-          className="absolute inset-0 z-0"
-          style={{ 
-            backgroundImage: "url('/hero.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            opacity: 0.6
-          }}
-        />
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero.png"
+            alt=""
+            fetchPriority="high"
+            className="w-full h-full object-cover opacity-60 transition-opacity duration-1000"
+            onLoad={(e) => (e.currentTarget.style.opacity = "0.6")}
+          />
+        </div>
         {/* Overlays */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-slate-900/40 via-slate-900/70 to-slate-900" />
         <div className="absolute inset-0 z-[2] bg-blue-500/5 mix-blend-overlay" />
